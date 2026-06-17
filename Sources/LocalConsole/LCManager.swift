@@ -870,9 +870,7 @@ public class LCManager: NSObject, UIGestureRecognizerDelegate {
         // If device is phone in landscape, disable resize controller.
         if UIDevice.current.userInterfaceIdiom == .phone && consoleViewController.view.frame.width > consoleViewController.view.frame.height {
             resize.attributes = .disabled
-            if #available(iOS 16, *) {
-                resize.subtitle = "Portrait Orientation Only"
-            }
+            resize.subtitle = "Portrait Orientation Only"
         }
         
         let clear = UIAction(title: "Clear Console", image: UIImage(systemName: "delete.backward"), attributes: .destructive) { _ in
@@ -972,9 +970,7 @@ public class LCManager: NSObject, UIGestureRecognizerDelegate {
                                 self.consoleViewController.present(alertController,
                                                             animated: true)
                             }
-                            if #available(iOS 16, *) {
-                                action.subtitle = "\(value)"
-                            }
+                            action.subtitle = "\(value)"
                             actions.append(action)
                         }
                     }
